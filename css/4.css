@@ -1,0 +1,29 @@
+
+#frmdangky{width: 600px; margin: auto; border: 5px solid dimgray;font-size: 18px;
+ border-radius: 5px;
+ }
+ p{
+     margin-left: 15px;
+ }
+ #frmdangky label{width: 150px; display: inline-block; color: darkorange;}
+ #frmdangky .txt{width: 400px; border: 1px solid darkorange; padding: 10px; border-radius: 5px;}
+ #frmdangky button{width: 150px; height: 40px; font-size: 1em; border-radius: 5px; margin: auto; margin-left: 170px;}
+ #ten{
+     border-radius: 5px 5px black;
+     text-align: center;
+     background-color: black;
+     color: aliceblue;
+ }
+ #lt{
+     margin-left: 160px;
+ }
+ #gc{
+     height: 150px;
+    }
+
+ form .loi{
+     width: 580px; 
+     padding-top: 6px;
+     padding-bottom: 6px;
+     border: 1px solid red; background-color: yellow;
+ }   

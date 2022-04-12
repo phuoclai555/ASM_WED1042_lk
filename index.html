@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="js/cart.js">
+</head>
+
+<body>
+    <div class="giohang">
+        <a onclick="themvaogiohang(x)"><img src="images/cart.png"><span id="countsp">0</span></a>
+    </div>
+    <!-- <div id="showcart">
+        <table>
+            <tr>
+                <th>STT</th>
+                <th>Hình</th>
+                <th>Tên sản phẩm</th>
+                <th>Đơn giá</th>
+                <th>Số lượng</th>
+                <th>Thành tiền ($)</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+
+        </table>
+    </div>   -->
+    <div class="boxcenter">
+        <div class="row mb header">
+            <h1> SIÊU THỊ TRỰC TUYẾN</h1>
+        </div>
+
+        <div class="row mb menu">
+            <ul>
+                <li><a href="index.html">Trang chủ</a></li>
+                <li><a href="#">Giỏ hàng</a></li>
+                <li><a href="#">Liên hệ</a></li>
+                <li><a href="#">Góp ý</a></li>
+                <li><a href="#">Hỏi đáp</a></li>
+                <li><a href="Bai4.html">Đăng ký</a></li>
+            </ul>
+        </div>
+        <div class="row mb ">
+            <div class="row">
+                <div class="banner mb">
+                    <div class="slideshow-container">
+
+                        <div class="mySlides fade">
+                          <div class="numbertext">1 / 8</div>
+                          <img src="image/0.jpg" style="width:100%">
+                          <div class="text">Dell Inspro</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">2 / 8</div>
+                          <img src="image/1.jpg" style="width:100%">
+                          <div class="text">Dell 172P</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                          <div class="numbertext">3 / 8</div>
+                          <img src="image/2.jpg" style="width:100%">
+                          <div class="text">HP 189L</div>
+                        </div>
+                        
+                        <div class="mySlides fade">
+                            <div class="numbertext">4 / 8</div>
+                            <img src="image/3.jpg" style="width:100%">
+                            <div class="text">Laptop Dell</div>
+                          </div>
+                        
+                          <div class="mySlides fade">
+                            <div class="numbertext">5 / 8</div>
+                            <img src="image/4.jpg" style="width:100%">
+                            <div class="text">Laptop HP</div>
+                          </div>
+                        
+                          <div class="mySlides fade">
+                            <div class="numbertext">6 / 8</div>
+                            <img src="image/5.jpg" style="width:100%">
+                            <div class="text">Laptop Raser</div>
+                          </div>
+                        
+                          <div class="mySlides fade">
+                            <div class="numbertext">7 / 8</div>
+                            <img src="image/6.jpg" style="width:100%">
+                            <div class="text">ASUS ZeroBook</div>
+                          </div>
+                        
+                          <div class="mySlides fade">
+                            <div class="numbertext">8 / 8</div>
+                            <img src="image/7.jpg" style="width:100%">
+                            <div class="text">ASUS VivoBook</div>
+                          </div>
+                        <a class="prev" onclick="plusSlides(-1)">❮</a>
+                        <a class="next" onclick="plusSlides(1)">❯</a>
+                        
+                        </div>
+                </div>
+                
+            </div>
+            <div class="row">
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/1.png" alt=""></div>
+                    <p>$<span>10</span></p>
+                    <a href="#">Iphone 13 PRO</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/2.jpg" alt=""></div>
+                    <p>$<span>20</span></p>
+                    <a href="#">Sam Sung</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/3.jpg" alt=""></div>
+                    <p>$<span>30</span></p>
+                    <a href="#">Nokia</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/4.jpg" alt=""></div>
+                    <p>$<span>40</span></p>
+                    <a href="#">Laptop Dell</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/5.webp" alt=""></div>
+                    <p>$<span>50</span></p>
+                    <a href="#">Laptop Microsoft</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/6.jpg" alt=""></div>
+                    <p>$<span>60</span></p>
+                    <a href="#">Laptop vivo</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/7.jpg" alt=""></div>
+                    <p>$<span>70</span></p>
+                    <a href="#">Headphone</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp mr">
+                    <div class="row img"><img src="images/8.jpg" alt=""></div>
+                    <p>$<span>80</span></p>
+                    <a href="#">Loa bluetooth JBL</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+                <div class="boxsp ">
+                    <div class="row img"><img src="images/9.jpg" alt=""></div>
+                    <p>$<span>90</span></p>
+                    <a href="#">Chuột Logitech</a>
+                    <input type="number" name="soluong" min="1" max="10" value="1">
+                    <button onclick="themvaogiohang(this)">Đặt hàng</button>
+                </div>
+            </div>
+        
+        
+        </div>
+    </div>
+    <script src="js/cart.js"></script>
+    <script>
+        showcountsp();
+    </script>
+</body>
+
+</html>

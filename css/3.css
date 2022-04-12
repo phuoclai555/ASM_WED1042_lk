@@ -1,0 +1,39 @@
+#container{
+    width: 1200px; margin: auto;
+}
+
+table{
+    margin: auto;
+    border: 1px solid lightblue;
+}
+#td h2{
+    margin: auto;
+    text-align: center;
+}
+#form{
+    text-align: center; margin-left: 200px;
+    background-color: aquamarine;
+}
+th{
+    text-transform: uppercase; color: black;
+    background-color: aquamarine;
+}
+
+.y input{ 
+    width: 50px;
+}
+
+.z{
+    background-color: aqua;
+}
+
+.td{
+    margin: 10px 50px 0 550px;
+}
+
+table{
+    border: 1px solid black;
+    width: 950px;
+    height: 400px;
+    align-items: center;
+}

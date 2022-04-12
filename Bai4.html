@@ -1,0 +1,145 @@
+
+        <html>
+            <head>
+                <title>Lê Phước Lai-PS25050</title>
+                <link rel="stylesheet" href="css/4.css">
+            </head>
+
+            <body ng-app="b4" ng-controller="ctrl1">
+                <form name="frm" action="xuly.php" id="frmdangky" method="post">
+                    <div id="ten"> Đăng ký thành viên </div>
+                     <p>
+                        <label >Mã sinh viên</label>
+                        <input id="masv" type="text" class="txt" placeholder="Nhập đúng 7 kí tự" name="un">
+                    </p>
+                    <p>
+                     <label >Họ và tên </label>
+                     <input id="hoten" type="text" class="txt" placeholder="Nhập nhỏ hơn 30 kí tự" name="pw">
+                    </p>
+                    <p>
+                        <label for="">Email</label>
+                        <input id="email" type="text" class="txt">
+                    </p>
+                    <p id="s1">
+                        <label>Giới tính</label>
+                        <input type="radio" value="0" name="phai">Nữ
+                        <input type="radio" value="1" name="phai">Nam
+                    </p>
+                    <p id="s2">
+                        <label for="">Sở thích</label>
+                        <input type="checkbox" name="st" id="">Đọc sách
+                        <input type="checkbox" name="st" id="">Du lịch 
+                        <input type="checkbox" name="st" id="">Ẩm thực
+                        <input type="checkbox" name="st" id="">Âm nhạc
+                        <input type="checkbox" name="st" id="">Khác
+                    </p>
+                    <p>
+                        <label >Quốc tịnh</label>
+                        <select id="qt" class="txt">
+                            <option value="0">Chọn quốc tịch</option>
+                            <option value="1">Việt Nam</option>
+                            <option value="2">USA</option>
+                            <option value="3">Khác</option>
+                        </select>
+                    </p>
+                    <p>
+                     <label >Ghi chú</label>
+                     <input id="gc" type="text" class="txt" name="gc">
+                     </p>
+                    <p>
+                        <div id="baoloi"></div>
+                        <button id="btndk" type="button" onclick=" kiemtra();">Đăng ký</button>
+                    </p>
+                </form> 
+            </body>
+        </html>
+
+        <script>
+            app =  angular.module("b4",[]) ;
+            app.controller("ctrl1",xuly);
+            function xuly($scope){
+        
+            }
+        </script>
+<!-- <script>
+    function kiemtra(){
+        var loi ="";
+
+        var masv =document.getElementById("masv")
+        if(masv.value==""){
+            masv.className="loi"
+            loi+="Mã sinh viên không được bỏ trống<br>";
+        }else if(masv.value.length!=7){
+            masv.className="loi"
+            loi+="Mã sinh viên không đung 7 kí tự<br>";    
+        }else{
+            masv.className="txt";
+        }
+
+        var hoten =document.getElementById("hoten")
+        if(hoten.value==""){
+            hoten.className="loi"
+            loi+="Họ tên không được bỏ trống<br>";
+        }else if(hoten.value.length>30){
+            hoten.className="loi"
+            loi+="Họ tên quá dài<br>";    
+        }else{
+            hoten.className="txt";
+        }
+
+        var email =document.getElementById("email");
+        if(email.value==""){
+            email.className ="loi";
+            loi+="Email không được bỏ trống<br>";
+        }else{
+            email.className="txt";
+        }
+
+        dem = 0;
+        var arrphai = document.getElementsByName("phai");
+        for(i=0;i<arrphai;i++){
+            if(arrphai[i].checked) dem++;
+        }
+        if(dem==0){
+            document.getElementById("s1").className="loi"
+            loi+="Phải chọn giới tính<br>" 
+        }else{
+            document.getElementById("s1").className=""
+        }
+
+        dem = 0;
+        var arrsothich = document.getElementsByName("st");
+        for(i=0;i<arrsothich.length;i++){
+            if(arrsothich[i].checked) dem++;
+        }
+        if(dem==0){
+            document.getElementById("s2").className="loi"
+            loi+="Phải chọn ít nhất 1 sở thích<br>" 
+        }else{
+            document.getElementById("s1").className=""
+        }
+
+        var qt =document.getElementById("qt")
+        if(qt.value==0){
+            qt.className ="loi";
+            loi+= "Phải chọn quốc tịch<br>"
+        }else{
+            qt.className="txt";
+        }
+
+        var gc = document.getElementById("gc")
+        if(gc.value.length>200){
+            gc.className="loi"
+            loi+= "Ghi chú phải dưới 200 kí tự<br>"
+        }else gc.className="txt"
+
+        if(loi!=""){
+            document.getElementById("baoloi").innerHTML=loi;
+            return false;
+        }
+
+    }
+
+    
+    
+</script> -->

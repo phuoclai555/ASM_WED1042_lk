@@ -1,0 +1,138 @@
+<html>
+    <head>
+        <title>Lê Phước Lai-PS25050</title>
+        <link rel="stylesheet" href="css/1.css">
+    </head>
+
+    <body>
+       
+           <div id="container">
+            <h4>Giải Phương Trình ax<sup>2</sup>+bx+c=0</h4>
+                <span>Số lần giải: <b id="soLanGiai"></b></span>
+            <hr>
+            <form id="form1" name="giaibac2"></form>
+            <div class="set">
+                <label>Nhập số a: </label>
+                <input id="a"  name="iput" type="text" placeholder="Nhập số từ 0 đến 10" onmouseout="xuat(this)" onfocus="nhap(this)" onclick="nhapa()"> <br>
+            </div>
+            <div class="set">
+                <label>Nhập số b: </label>
+                <input id="b"  name="iput" type="text" placeholder="Nhập số từ 0 đến 10" onmouseout="xuat(this)" onfocus="nhap(this)" onclick="nhapb()"> <br>
+            </div>
+            <div class="set">
+                <label>Nhập số c: </label>
+                <input id="c"  name="iput" type="text" placeholder="Nhập số từ 0 đến 10"onmouseout="xuat(this)" onfocus="nhap(this)" onclick="nhapc()"> <br>
+            </div>      
+           
+                <button id="btngiai" class="buttonblock" disabled type="button"  onclick="ptb2.giai(); dem()">Giải PT</button>
+                <button id="button" class="button" type="button" onclick="choso()">Cho số</button>
+            </form>   
+                <div id="kq"> </div>
+                <p id="nght"></p>
+ 
+                <script>
+                    var today = new Date();
+                    var date = today.getDate()+"/"+(today.getMonth()+1)+"/"+today.getFullYear();
+                    
+
+                    var today1 = new Date();
+                    var time = today1.getHours()+":"+today1.getMinutes()+":"+today1.getSeconds();
+                    document.getElementById("nght").innerHTML= "Bây giờ là: "+date+" "+time;
+                </script>
+                </p>
+         </div>
+        
+
+    </body>
+</html>
+
+<script>
+    function choso(){
+    var a = Math.round(Math.random()*10);
+    var b = Math.round(Math.random()*10);
+    var c = Math.round(Math.random()*10);
+    document.getElementById("a").value=a;
+    document.getElementById("b").value=b;
+    document.getElementById("c").value=c;
+    var btn = document.getElementById("btngiai");
+    btn.disabled=false;
+    btn.className='buttonblock'
+
+}
+</script>
+<script>
+    function nhap(x){
+        x.style.background = "yellow";
+    }
+</script>
+
+<script>
+    function xuat(x){
+        x.style.background = "white";
+    }
+</script>
+<script>
+    function nhapa(){
+    var a = document.forms["giaibac2"]["a"].value; 
+    }
+    function nhapb(){
+    var b = document.forms["giaibac2"]["b"].value; 
+    }
+    function nhapc(){
+    var c = document.forms["giaibac2"]["c"].value; 
+    }
+
+</script>
+<script>
+    var ptb2 = {
+        giai:function(){  
+            var a = document.getElementById("a").value;
+            var b = document.getElementById("b").value;
+            var c = document.getElementById("c").value;
+            
+            if(a == 0 ){
+                    if( b==0 ){
+                         if(c==0){
+                            str =`<p>Phương trình vô số nghiệm</p>`;
+                        document.getElementById("kq").innerHTML=str;
+                         }else{
+                            str =`<p>Phương trình vô nghiệm</p>`;
+                            document.getElementById("kq").innerHTML=str;
+                         }
+                    }else{
+                        var x=-c/b
+                        str =`<p>Phương trình có một nghiệm đơn</p>
+                                    <p>X = ${x.toFixed(2)} </p>
+                                `;
+                        document.getElementById("kq").innerHTML=str;
+                    }
+                }else{
+                    var delta = Math.pow(b,2)-4*a*c;
+                    if(delta<0){    
+                         str =`<p>Phương trình vô nghiệm</p>`;
+                        document.getElementById("kq").innerHTML=str;
+                     }else if(delta == 0){
+                         var x0= -b/(2*a);
+                         str =`<p>Phương trình có ngiệm kép x<sub>0</sub>: ${x0.toFixed(2)}</p> `;
+                        document.getElementById("kq").innerHTML=str;
+                     }else{
+                         var x1 = (-b + Math.sqrt(delta))/(2*a)
+                         var x2 = (-b - Math.sqrt(delta))/(2*a)
+                         var str =`<p>Phương trình có 2 ngiệm:</p>
+                         <p>Phương trình có ngiệm x<sub>1</sub>: ${x1.toFixed(2)}</p>
+                         <p>Phương trình có ngiệm x<sub>2</sub>: ${x2.toFixed(2)}</p>
+                         `;
+                         document.getElementById("kq").innerHTML=str;
+                     }
+                }
+        }
+    }
+</script>
+
+<script>
+        var soLanGiai=0;
+        function dem(){
+            soLanGiai++;
+            document.getElementById("soLanGiai").innerHTML=soLanGiai;
+        }
+</script>
